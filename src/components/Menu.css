@@ -106,16 +106,6 @@
   margin-top: 32px;
 }
 
-@media (min-width: 960px) {
-  .menu-sections {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .menu-section-card:nth-child(n+3) {
-    grid-column: 1 / -1;
-  }
-}
-
 .menu-section-card {
   background: #14110f;
   padding: 28px;
@@ -137,10 +127,10 @@
 
 .menu-row {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: minmax(0, 1fr) auto;
   gap: 24px;
   align-items: flex-start;
-  padding-bottom: 16px;
+  padding-bottom: 14px;
   border-bottom: 1px dashed rgba(212, 163, 13, 0.15);
 }
 
@@ -153,12 +143,15 @@
   margin: 0;
   color: var(--text-h);
   font-weight: 700;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .menu-item-desc {
   margin: 6px 0 0;
   color: rgba(249, 231, 180, 0.84);
   font-size: 0.94rem;
+  line-height: 1.6;
 }
 
 .menu-item-price {
@@ -166,15 +159,131 @@
   color: var(--accent);
   font-weight: 700;
   text-align: right;
+  white-space: nowrap;
 }
 
 @media (max-width: 880px) {
-  .menu-section-card,
-  .menu-row {
+  .menu-page {
+    padding: 24px 16px 48px;
+  }
+
+  .menu-section-card {
     grid-template-columns: 1fr;
   }
 
+  .menu-row {
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+  }
+
   .menu-item-price {
-    text-align: left;
+    text-align: right;
+    margin-top: 0;
+    font-size: 0.95rem;
+  }
+
+  .menu-banner {
+    max-height: 280px;
+  }
+
+  .banner-copy {
+    left: 20px;
+    bottom: 20px;
+    max-width: 80%;
+  }
+
+  .banner-copy h2 {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+  }
+
+  .menu-hero {
+    gap: 24px;
+    padding-bottom: 24px;
+  }
+
+  .menu-hero h1 {
+    font-size: clamp(2rem, 6vw, 3rem);
+  }
+
+  .menu-tabs {
+    gap: 12px;
+  }
+
+  .menu-tab {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+
+  .menu-sections {
+    gap: 20px;
+    margin-top: 24px;
+  }
+
+  .menu-section-card {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-page {
+    padding: 20px 12px 32px;
+  }
+
+  .menu-banner {
+    max-height: 200px;
+    margin-bottom: 20px;
+  }
+
+  .banner-copy {
+    left: 16px;
+    bottom: 16px;
+  }
+
+  .banner-copy .eyebrow {
+    font-size: 0.7rem;
+  }
+
+  .banner-copy h2 {
+    font-size: clamp(1.4rem, 6vw, 2rem);
+  }
+
+  .menu-hero h1 {
+    font-size: clamp(1.8rem, 7vw, 2.5rem);
+  }
+
+  .menu-hero p {
+    font-size: 0.95rem;
+  }
+
+  .menu-tab {
+    padding: 10px 16px;
+    font-size: 0.85rem;
+  }
+
+  .menu-section-card {
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .menu-section-card h2 {
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+  }
+
+  .menu-row {
+    gap: 12px;
+    padding-bottom: 12px;
+  }
+
+  .menu-item-name {
+    font-size: 1rem;
+  }
+
+  .menu-item-desc {
+    font-size: 0.9rem;
+  }
+
+  .menu-item-price {
+    font-size: 0.9rem;
   }
 }
