@@ -29,7 +29,7 @@ const menuItems = [
   { name: 'Makki Roti', price: '£1.50', category: 'Veg', section: 'Breads' },
   { name: 'Yoghurt / Raita', price: '£1.30', category: 'Veg', section: 'Breads' },
   { name: 'Fish Pakora (per kg)', price: '£15', category: 'Non-Veg', section: 'Specials' },
-  { name: 'Chicken Kebab (per piece)', price: '75p', category: 'Non-Veg', section: 'Specials' },
+  { name: 'Chicken Kebab (per piece)', price: '85p', category: 'Non-Veg', section: 'Specials' },
   { name: 'Makki Roti & Saag', price: '£7.00', category: 'Non-Veg', section: 'Specials' },
   { name: 'Chicken Curry with bone', price: '£14.99', category: 'Non-Veg', section: 'Family Pack Curries' },
   { name: 'Chicken Curry without bone', price: '£16.99', category: 'Non-Veg', section: 'Family Pack Curries' },
