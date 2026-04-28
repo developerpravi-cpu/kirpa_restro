@@ -135,3 +135,43 @@
     width: 32px;
   }
 }
+/* ================= MOBILE NAV FIX ================= */
+
+@media (max-width: 720px) {
+
+  .nav-inner {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  /* Top row: logo + button */
+  .brand {
+    order: 1;
+  }
+
+  .nav-cta {
+    order: 2;
+    margin-left: auto;
+  }
+
+  /* Bottom row: nav links */
+  .nav-list {
+    order: 3;
+    width: 100%;
+    flex-wrap: nowrap;         /* ❌ stop wrapping */
+    overflow-x: auto;          /* ✅ scroll instead */
+    justify-content: flex-start;
+    gap: 14px;
+    margin: 10px 0 0;
+  }
+
+  .nav-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-link {
+    flex: 0 0 auto;            /* prevent shrinking */
+    padding: 6px 10px;
+    font-size: 0.9rem;
+  }
+}

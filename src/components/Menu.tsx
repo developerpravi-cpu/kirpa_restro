@@ -3,7 +3,7 @@ import vegImg from '../assets/veg-items.png'
 import nonVegImg from '../assets/non-veg.png'
 import './Menu.css'
 
-const categories = ['All', 'Veg', 'Non-Veg']
+const categories = ['All', 'Veg', 'Non-Veg', 'Tiffin']
 
 const menuItems = [
   { name: 'Dal Makhani', price: '£6.00', category: 'Veg', section: 'Curries' },
@@ -37,6 +37,31 @@ const menuItems = [
   { name: 'Lamb Curry without bone', price: '£23.99', category: 'Non-Veg', section: 'Family Pack Curries' },
   { name: 'Chicken Curry Meal', price: '£12.00', category: 'Non-Veg', section: 'Meal Deals', description: 'Portion + 4 Roti or Rice' },
   { name: 'Lamb Curry Meal', price: '£14.99', category: 'Non-Veg', section: 'Meal Deals', description: 'Portion + 4 Roti or Rice' },
+  { 
+  name: 'Basic Tiffin', 
+  price: '£6.50', 
+  category: 'Tiffin', 
+  section: 'Tiffin Plans',
+  description: '1 Dal or Sabzi, Raita, Salad, 4 Roti'
+},
+{ 
+  name: 'Premium Tiffin', 
+  price: '£7.99', 
+  category: 'Tiffin', 
+  section: 'Tiffin Plans',
+  description: '1 Dal & 1 Sabzi, Raita, Salad, Rice & 4 Roti'
+},
+{ name: 'Samosa', price: '70p', category: 'Veg', section: 'Starters & Snacks' },
+{ name: 'Chicken Samosa', price: '£1.00', category: 'Non-Veg', section: 'Starters & Snacks' },
+{ name: 'Spring Roll', price: '80p', category: 'Veg', section: 'Starters & Snacks' },
+{ name: 'Chilli Paneer', price: '£6.50', category: 'Veg', section: 'Starters & Snacks' },
+{ name: 'Veg Manchurian', price: '£6.50', category: 'Veg', section: 'Starters & Snacks', description: '6 pieces' },
+
+{ name: 'Dahi Bhalla', price: '£4.00', category: 'Veg', section: 'Chaat & Street Bites' },
+{ name: 'Samosa Chaat', price: '£4.50', category: 'Veg', section: 'Chaat & Street Bites' },
+{ name: 'Kulfi Faluda', price: '£4.00', category: 'Veg', section: 'Chaat & Street Bites' },
+
+{ name: 'Chole Bhature', price: '£6.00', category: 'Veg', section: 'Special Combos', description: 'Chana masala & 2 bhature & salad' },
 ]
 
 function Menu() {
@@ -71,7 +96,14 @@ function Menu() {
     return acc
   }, {})
 
-  const sectionOrder = ['Curries', 'Breads', 'Rice']
+  const sectionOrder = [
+  'Starters & Snacks',
+  'Chaat & Street Bites',
+  'Special Combos',
+  'Curries',
+  'Breads',
+  'Rice'
+]
   const orderedSections = [
     ...sectionOrder.filter((section) => groups[section]),
     ...Object.keys(groups)

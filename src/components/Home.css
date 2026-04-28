@@ -429,82 +429,113 @@
 }
 
 @media (max-width: 480px) {
+  /* Page spacing */
   .home-page {
-    padding: 16px 12px 32px;
+    padding: 14px 10px 28px;
   }
 
+  /* HERO */
   .hero-section {
-    gap: 24px;
-    padding: 24px 0 32px;
-  }
-
-  .hero-section h1,
-  .section-header h2,
-  .home-contact h2 {
-    font-size: clamp(2rem, 6vw, 3rem);
-  }
-
-  .hero-text,
-  .section-header p,
-  .home-contact p {
-    font-size: 1rem;
-    line-height: 1.7;
-    margin-bottom: 24px;
-  }
-
-  .hero-actions .button {
-    max-width: 100%;
-    padding: 12px 20px;
-    font-size: 0.95rem;
-  }
-
-  .menu-card {
-    padding: 20px;
-    border-radius: 20px;
-  }
-
-  .menu-card h3 {
-    font-size: 1.1rem;
-  }
-
-  .contact-card {
-    padding: 20px;
-    border-radius: 16px;
-  }
-
-  .contact-card-header {
-    gap: 14px;
-  }
-
-  .contact-icon-wrap {
-    width: 40px;
-    height: 40px;
-  }
-
-  .contact-icon {
-    font-size: 1rem;
-  }
-
-  .about-panel {
-    padding: 24px 20px;
-    border-radius: 24px;
-  }
-
-  .about-panel h2 {
-    font-size: clamp(1.8rem, 5vw, 2.4rem);
-  }
-
-  .about-features ul {
-    padding-left: 1.2rem;
-  }
-
-  .contact-panel,
-  .about-panel,
-  .menu-card {
-    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px 0 28px;
   }
 
   .hero-copy {
     text-align: center;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .hero-text {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hero-actions .button {
+    width: 100%;
+    max-width: 260px;
+    padding: 12px;
+  }
+
+  /* MENU */
+  .menu-board-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .menu-card {
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  /* CONTACT */
+  .home-contact {
+    padding-top: 28px;
+  }
+
+  .contact-panel {
+    padding: 18px 14px;
+    border-radius: 18px;
+    box-shadow: none;
+  }
+
+  .home-contact h2 {
+    text-align: center;
+    font-size: 1.6rem;
+  }
+
+  .home-contact p {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+
+  .contact-info {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .contact-card {
+    padding: 14px;
+    border-radius: 14px;
+  }
+
+  .contact-card-header {
+    align-items: center;
+    gap: 12px;
+  }
+
+  .contact-icon-wrap {
+    width: 36px;
+    height: 36px;
+  }
+
+  .contact-card-type {
+    font-size: 0.85rem;
+  }
+
+  .contact-card-name,
+  .contact-number {
+    font-size: 0.85rem;
+  }
+
+  /* ABOUT */
+  .about-panel {
+    padding: 20px 14px;
+    border-radius: 18px;
+  }
+
+  .about-panel h2 {
+    font-size: 1.6rem;
   }
 }
